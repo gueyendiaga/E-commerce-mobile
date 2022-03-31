@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/m10"
+    android:layout_marginRight="@dimen/m10"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/shape_round_service"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/m15"
+    android:paddingTop="@dimen/m10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/nutella"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lunettes de soleil"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/detail_product"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_more"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m10"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_in_stock"
+                android:text="En stock"
+                android:textColor="@color/green"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="130000 FCFA"
+                android:id="@+id/price"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:text="The only cookie with a creamy heart of Nutella, made to share with those you love."
+            android:layout_marginTop="@dimen/m10"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

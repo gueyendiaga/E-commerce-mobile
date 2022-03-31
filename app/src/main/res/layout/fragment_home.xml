@@ -1,0 +1,102 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginEnd="@dimen/m15">
+            <LinearLayout
+                android:id="@+id/linear_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start|center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ic_btn_retour"
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="center|start|center_vertical"
+                    android:src="@drawable/ic_menu" />
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/m20"
+                    android:gravity="center"
+                    android:text="Accessoires"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/m20"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:layout_marginEnd="@dimen/m25"
+                    android:src="@drawable/ic_search" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="@dimen/m25"
+                    android:src="@drawable/ic_shopping_cart" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:isScrollContainer="true"
+        android:measureAllChildren="true"
+        android:paddingTop="@dimen/m15"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/m100" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
